@@ -1,0 +1,87 @@
+[
+    {
+        "breed": "Пионус",
+        "habitat": "Южная и Центральная Америка",
+        "size": "28",
+        "interestingFact": "Когда у птицы стресс, издает звук похожий на храп",
+        "image": [
+            "https://pet7.ru/wp-content/uploads/2017/11/Pionus-druzhelyubnyj-vid-225x225.jpg",
+            "https://pet7.ru/wp-content/uploads/2017/11/Pionus-mirolyubivyj-vid.jpg",
+            "https://pet7.ru/wp-content/uploads/2017/11/Pionus-opisanie-vida.jpg",
+            "https://pet7.ru/wp-content/uploads/2017/11/Pionus-osobennosti-vida.jpg",
+            "https://pet7.ru/wp-content/uploads/2017/11/Pionus-soderzhanie.jpg",
+            "https://pet7.ru/wp-content/uploads/2017/11/Pionus-spokojnyj-vid.jpg",
+            "https://pet7.ru/wp-content/uploads/2017/11/Pionus-uhod.jpg"
+        ],
+        "contentFeatures": "Частая нехватка витамина А, постоянно приносите новые веточки плодовых деревьев. В клетке должны быть игрушки, веревочки, жердочки и лесенки",
+        "video": "https://www.youtube.com/watch?v=Oy6MiRZ1BRI"
+    },
+    {
+        "breed": "Волнистый попугай",
+        "habitat": "Австралия",
+        "size": "20",
+        "interestingFact": "Волнистые попугаи обитают стаями, но не имеют вожака. Защитой стаи занимаются взрослые самцы",
+        "image": [
+            "https://pet7.ru/wp-content/uploads/2017/09/Volnistyj-popugaj-soderzhanie-225x215.jpg",
+            "https://pet7.ru/wp-content/uploads/2017/09/Volnistyj-popugaj-druzhelyubnyj-vid.jpg",
+            "https://pet7.ru/wp-content/uploads/2017/09/Volnistyj-popugaj-opisanie-vida.jpg",
+            "https://pet7.ru/wp-content/uploads/2017/09/Volnistyj-popugaj-osobennosti-vida.jpg",
+            "https://pet7.ru/wp-content/uploads/2017/09/Volnistyj-popugaj-samyj-rasprostranennyj-vid.jpg",
+            "https://pet7.ru/wp-content/uploads/2017/09/Volnistyj-popugaj-uhod.jpg",
+            "https://pet7.ru/wp-content/uploads/2017/09/Volnistyj-popugaj-horosho-obuchaem-rechi.jpg"
+        ],
+        "contentFeatures": "Птица будет чувствовать себя хорошо в просторной клетке. Она должна быть оснащена ветками и небольшим бассейном. В клетке необходимо периодически убирать",
+        "video": "https://www.youtube.com/watch?v=YaWSofG1ixU"
+    },
+    {
+        "breed": "Грифовый попугай",
+        "habitat": "Новая Гвинея, Индонезия",
+        "size": "50",
+        "interestingFact": "Птица хорошо себя чувствует при влажном и теплом климате",
+        "image": [
+            "https://pet7.ru/wp-content/uploads/2017/11/Grifovyj-popugaj-osobennosti-vida-225x225.jpg",
+            "https://pet7.ru/wp-content/uploads/2017/11/Grifovyj-popugaj-dobrozhelatelnyj-vid.jpg",
+            "https://pet7.ru/wp-content/uploads/2017/11/Grifovyj-popugaj-krupnyj-vid.jpg",
+            "https://pet7.ru/wp-content/uploads/2017/11/Grifovyj-popugaj-opisanie-vida.jpg",
+            "https://pet7.ru/wp-content/uploads/2017/11/Grifovyj-popugaj-soderzhanie.jpg",
+            "https://pet7.ru/wp-content/uploads/2017/11/Grifovyj-popugaj-uhod.jpg",
+            "https://pet7.ru/wp-content/uploads/2017/11/Grifovyj-popugaj-ekzoticheskij-vid.jpg"
+        ],
+        "contentFeatures": "Эта экзотическая птица очень редкая, ее могут держать только истинные ценители фауны. Она требует специального рациона, который схож с тем, что едят в естественном природном обитании. В противном случае возникнут болезни пищеварительного тракта. Нужен огромных размеров вольер, так как, расправив крылья, она занимает большую площадь",
+        "video": "https://www.youtube.com/watch?v=auv6oYBvQaU"
+    },
+    {
+        "breed": "Амазон",
+        "habitat": "Южная и Центральная Америка",
+        "size": "45",
+        "interestingFact": "Если уделять мало времени такому попугаю, то он сам будет завлекать вас в свои забавы",
+        "image": [
+            "https://pet7.ru/wp-content/uploads/2017/11/Amazon-igrivyj-vid-225x225.jpg",
+            "https://pet7.ru/wp-content/uploads/2017/11/Amazon-druzhelyubnyj-vid.jpeg",
+            "https://pet7.ru/wp-content/uploads/2017/11/Amazon-opisanie-vida.jpg",
+            "https://pet7.ru/wp-content/uploads/2017/11/Amazon-obshhitelnyj-vid.jpg",
+            "https://pet7.ru/wp-content/uploads/2017/11/Amazon-soderzhanie.jpg",
+            "https://pet7.ru/wp-content/uploads/2017/11/Amazon-osobennosti-vida.jpg",
+            "https://pet7.ru/wp-content/uploads/2017/11/Amazon-uhod.jpg"
+        ],
+        "contentFeatures": "Необходимо следить за питанием, не давать белок, избегать ожирения птицы. Приобретите игровой стенд, так птица менше будет обращать внимание на ваши вещи",
+        "video": "https://www.youtube.com/watch?v=7AgKsfWGxQ0"
+    },
+    {
+        "breed": "Розелла пестрая",
+        "habitat": "Австралия, остров Тасмания",
+        "size": "35",
+        "interestingFact": "Попугай этого вида держится грациозно и статно, даже с некоторым высокомерием, будто осознает свою величавую красоту",
+        "image": [
+            "https://pet7.ru/wp-content/uploads/2017/10/Rozella-pestraya-soderzhanie-225x225.jpg",
+            "https://pet7.ru/wp-content/uploads/2017/10/Rozella-pestraya-druzhelyubnyj-vid.jpg",
+            "https://pet7.ru/wp-content/uploads/2017/10/Rozella-pestraya-obshhitelnyj-vid.jpg",
+            "https://pet7.ru/wp-content/uploads/2017/10/Rozella-pestraya-opisanie-vida.jpg",
+            "https://pet7.ru/wp-content/uploads/2017/10/Rozella-pestraya-osobennosti-vida.jpg",
+            "https://pet7.ru/wp-content/uploads/2017/10/Rozella-pestraya-uhod.jpg",
+            "https://pet7.ru/wp-content/uploads/2017/10/Rozella-pestraya-yarkij-vid.jpg"
+        ],
+        "contentFeatures": "Птица попытается все исследовать, поэтому не стоит оставлять ценные вещи или предметы, которые навредят ей, на виду",
+        "video": "https://www.youtube.com/watch?v=etLmxeJDFMcI"
+    }
+]
