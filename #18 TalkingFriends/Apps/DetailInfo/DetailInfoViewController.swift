@@ -12,26 +12,31 @@ protocol DetailInfoPresenterDelegate: AnyObject {
 }
 
 final class DetailInfoViewController: UIViewController {
-
     
     @IBOutlet weak var parrotImageView: UIImageView!
     @IBOutlet weak var container: UIView!
     @IBOutlet weak var photoView: UIView!
+    @IBOutlet var imageViews: [UIImageView]!
     
-    @IBOutlet var images: [UIImageView]!
+    @IBOutlet weak var stackView: UIStackView!
     
     @IBOutlet weak var breedLabel: UILabel!
-    @IBOutlet weak var stackView: UIStackView!
     @IBOutlet weak var contentFeaturesLabel: UILabel!
-    
     @IBOutlet weak var sizeLabel: UILabel!
-    
     @IBOutlet weak var habitatLabel: UILabel!
-    
     @IBOutlet weak var interestingFactLabel: UILabel!
     
-    let imageDownloadService = ImageDownloadService()
     private let presenter: DetailInfoPresenter
+    
+    private let singleTapGestureRecognizer = UITapGestureRecognizer()
+    private let doubleTapGestureRecognizer = UITapGestureRecognizer()
+    
+    private struct Constants {
+        static var imageCornerRadius: CGFloat = 75
+        static var cornerRadius: CGFloat = 20
+        static var borderColor = UIColor.black.cgColor
+        static var borderWidth = 2.5
+    }
     
     init(presenter: DetailInfoPresenter) {
         self.presenter = presenter
@@ -44,74 +49,117 @@ final class DetailInfoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        parrotImageView.layer.cornerRadius = 75
-        parrotImageView.layer.borderWidth = 2.5
-        parrotImageView.layer.borderColor = UIColor.black.cgColor
-        container.layer.cornerRadius = 20
+        
+        setupUI()
+        setupNavBar()
+        setupGestureRecognizers()
+    }
+    
+    private func setupUI() {
+        parrotImageView.layer.cornerRadius = Constants.imageCornerRadius
+        parrotImageView.layer.borderWidth = Constants.borderWidth
+        parrotImageView.layer.borderColor = Constants.borderColor
+        
+        container.layer.cornerRadius = Constants.cornerRadius
         container.makeShadow()
         
+        photoView.layer.cornerRadius = Constants.cornerRadius
         photoView.makeShadow()
-        photoView.layer.cornerRadius = 20
-        stackView.layer.cornerRadius = 20
+        
+        stackView.layer.cornerRadius = Constants.cornerRadius
         stackView.clipsToBounds = true
-        
-        navigationController?.navigationBar.tintColor = .black
-//        navigationController?.navigationBar.titleTextAttributes =
-        
-        navigationItem.leftBarButtonItem = createCustomBarButton(
-            imageName: "chevron.backward",
-            selector: #selector(cancelLeftButtonTapped)
-        )
         
         guard let parrot = presenter.parrot else { return }
         
-        let imageUrls = parrot.images
         breedLabel.text = parrot.breed
         habitatLabel.text = "Место обитания: \(parrot.habitat)"
         sizeLabel.text = "Размер: до \(parrot.size) см"
         contentFeaturesLabel.text = "Особенности содержания: \(parrot.contentFeatures)"
         interestingFactLabel.text = "Интересный факт: \(parrot.interestingFact)"
         
-        images.enumerated().forEach { (index, imageView) in
-            
-            let imageUrl = imageUrls[index]
-            
-            imageDownloadService.getData(from: imageUrl) { result in
+        downloadImages(with: parrot)
+    }
+    
+    private func downloadImages(with parrot: Parrot) {
+        let allImageViews = [parrotImageView] + imageViews
+        
+        allImageViews.enumerated().forEach { (index, imageView) in
+            let urlString = parrot.images[index]
+            presenter.getParrotImage(url: urlString) { result in
                 switch result {
+                    
                 case .success(let data):
                     guard let image = UIImage(data: data) else { return }
                     DispatchQueue.main.async {
-                        imageView.image = image
+                        imageView?.image = image
                     }
                 case .failure(_):
-                    break
+                    /// Обработка ошибки
+                    print("Изображение по url: \(urlString) не загружено")
                 }
             }
         }
     }
-    @objc private func cancelLeftButtonTapped() {
-        navigationController?.popToRootViewController(animated: true)
+    
+    private func setupNavBar() {
+        navigationController?.navigationBar.tintColor = .black
+        let font = UIFont(name: "MarkerFelt-Thin", size: 18) ?? UIFont()
+        navigationItem.leftBarButtonItem = createCustomBarButton(
+            imageName: "chevron.backward",
+            title: " Мои говорящие друзья",
+            font: font,
+            selector: #selector(cancelLeftButtonTapped)
+        )
     }
     
-    func createCustomBarButton(imageName: String, selector: Selector) -> UIBarButtonItem {
-        let button = UIButton(type: .system)
-        button.setImage(
-            UIImage(systemName: imageName)?.withRenderingMode(.alwaysTemplate),
-            for: .normal
-        )
-        button.setTitle(" Мои говорящие друзья", for: .normal)
-        button.titleLabel?.font = UIFont(name: "MarkerFelt-Thin", size: 18)
-        button.tintColor = .black
-        button.imageView?.contentMode = .scaleAspectFit
-        button.contentVerticalAlignment = .fill
-        button.contentHorizontalAlignment = .fill
-        button.addTarget(self, action: selector, for: .touchUpInside)
+    private func setupGestureRecognizers() {
+        singleTapGestureRecognizer.addTarget(self, action: #selector(handleSingleTapGesture(_:)))
+        doubleTapGestureRecognizer.addTarget(self, action: #selector(handleDoubleTapGesture(_:)))
+        singleTapGestureRecognizer.numberOfTapsRequired = 1
+        doubleTapGestureRecognizer.numberOfTapsRequired = 2
         
-        let menuBarItem = UIBarButtonItem(customView: button)
-        return menuBarItem
+        singleTapGestureRecognizer.delegate = self
+        doubleTapGestureRecognizer.delegate = self
+        
+        parrotImageView.addGestureRecognizer(singleTapGestureRecognizer)
+        parrotImageView.addGestureRecognizer(doubleTapGestureRecognizer)
+    }
+    
+    @objc private func handleDoubleTapGesture(_ gestureRecognizer: UITapGestureRecognizer) {
+        guard let parrot = presenter.parrot else { return }
+        let videoUrlString = parrot.video
+        presenter.openYoutube(with: videoUrlString)
+    }
+    
+    @objc private func handleSingleTapGesture(_ gestureRecognizer: UITapGestureRecognizer) {
+        
+        guard let image = UIImage(named: "youtube") else { return }
+        
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: self.parrotImageView.frame.width, height: self.parrotImageView.frame.height))
+        imageView.image = image
+        parrotImageView.addSubview(imageView)
+        
+        imageView.alpha = 0.5
+        
+        UIView.animate(withDuration: 1.5, delay: 0.5, options: .curveEaseIn) {
+            imageView.alpha = 0
+        } completion: { [weak self] finished in
+            self?.parrotImageView.subviews.last?.removeFromSuperview()
+        }
+    }
+    
+    @objc private func cancelLeftButtonTapped() {
+        presenter.tapGoBack()
     }
 }
 
 extension DetailInfoViewController: DetailInfoPresenterDelegate {
     
+}
+
+extension DetailInfoViewController: UIGestureRecognizerDelegate {
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer,
+                           shouldRequireFailureOf otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        return gestureRecognizer === singleTapGestureRecognizer && otherGestureRecognizer === doubleTapGestureRecognizer
+    }
 }

@@ -30,6 +30,9 @@
 		7DB17DEB28FC85420052E526 /* ParrotViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB17DE928FC85420052E526 /* ParrotViewCell.swift */; };
 		7DB17DEC28FC85420052E526 /* ParrotViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DB17DEA28FC85420052E526 /* ParrotViewCell.xib */; };
 		7DB17DF328FE8A920052E526 /* UINavigationBar + Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB17DF228FE8A920052E526 /* UINavigationBar + Appearance.swift */; };
+		7DB17DF528FEC98C0052E526 /* UIViewController + Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB17DF428FEC98C0052E526 /* UIViewController + Alert.swift */; };
+		7DB17DF728FED8540052E526 /* UIView + Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB17DF628FED8540052E526 /* UIView + Shadow.swift */; };
+		7DB17DF928FF047E0052E526 /* UIViewController + CustomBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB17DF828FF047D0052E526 /* UIViewController + CustomBarButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +61,9 @@
 		7DB17DE928FC85420052E526 /* ParrotViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParrotViewCell.swift; sourceTree = "<group>"; };
 		7DB17DEA28FC85420052E526 /* ParrotViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ParrotViewCell.xib; sourceTree = "<group>"; };
 		7DB17DF228FE8A920052E526 /* UINavigationBar + Appearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationBar + Appearance.swift"; sourceTree = "<group>"; };
+		7DB17DF428FEC98C0052E526 /* UIViewController + Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Alert.swift"; sourceTree = "<group>"; };
+		7DB17DF628FED8540052E526 /* UIView + Shadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Shadow.swift"; sourceTree = "<group>"; };
+		7DB17DF828FF047D0052E526 /* UIViewController + CustomBarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + CustomBarButton.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +216,9 @@
 			isa = PBXGroup;
 			children = (
 				7DB17DF228FE8A920052E526 /* UINavigationBar + Appearance.swift */,
+				7DB17DF428FEC98C0052E526 /* UIViewController + Alert.swift */,
+				7DB17DF828FF047D0052E526 /* UIViewController + CustomBarButton.swift */,
+				7DB17DF628FED8540052E526 /* UIView + Shadow.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -288,7 +297,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DB17DF928FF047E0052E526 /* UIViewController + CustomBarButton.swift in Sources */,
 				7DB17DE128FC7ECD0052E526 /* ParrotCatalogRouter.swift in Sources */,
+				7DB17DF528FEC98C0052E526 /* UIViewController + Alert.swift in Sources */,
 				7DB17DD428FC45D20052E526 /* ImageDownloadService.swift in Sources */,
 				7DB17DEB28FC85420052E526 /* ParrotViewCell.swift in Sources */,
 				7DB17DE328FC7F290052E526 /* Routing.swift in Sources */,
@@ -300,6 +311,7 @@
 				7DB17DDB28FC61080052E526 /* Assemblying.swift in Sources */,
 				7DB17DDD28FC68310052E526 /* ParrotCatalogAssembly.swift in Sources */,
 				7DB17DAA28FC2CE00052E526 /* AppDelegate.swift in Sources */,
+				7DB17DF728FED8540052E526 /* UIView + Shadow.swift in Sources */,
 				7DB17DC528FC30150052E526 /* DetailInfoViewController.swift in Sources */,
 				7DB17DF328FE8A920052E526 /* UINavigationBar + Appearance.swift in Sources */,
 				7DB17DCB28FC3D230052E526 /* ParrotCatalogPresenter.swift in Sources */,

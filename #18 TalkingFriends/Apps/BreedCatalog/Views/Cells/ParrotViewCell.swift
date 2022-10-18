@@ -8,29 +8,36 @@
 import UIKit
 
 class ParrotViewCell: UITableViewCell {
-
-    @IBOutlet weak var parrotImageView: UIImageView!
-    @IBOutlet weak var container: UIView!
-    @IBOutlet weak var breedLabel: UILabel!
-    @IBOutlet var interestingFact: UILabel!
     
-    let imageDownloadService = ImageDownloadService()
+    @IBOutlet weak var parrotImageView: UIImageView!
+    @IBOutlet weak var breedLabel: UILabel!
+    @IBOutlet var interestingFactLabel: UILabel!
+    @IBOutlet weak var container: UIView!
+    
+    private struct Constants {
+        static var cornerRadius: CGFloat = 20
+        static var borderWidth: CGFloat = 2.5
+        static var borderColor = UIColor.black.cgColor
+    }
+    
+    weak var delegate: ParrotCatalogImageDownloadable?
     
     func configure(with parrot: Parrot) {
-        container.layer.cornerRadius = 20
-        container.makeShadow()
-        parrotImageView.layer.borderColor = UIColor.black.cgColor
+        backgroundColor = .clear
+        selectionStyle = .none
         
-        parrotImageView.layer.borderWidth = 2.5
-        parrotImageView.layer.cornerRadius = 70
-        
-        self.backgroundColor = .clear
-        self.selectionStyle = .none
+        parrotImageView.layer.borderColor = Constants.borderColor
+        parrotImageView.layer.borderWidth = Constants.borderWidth
         
         breedLabel.text = parrot.breed
-        interestingFact.text = parrot.interestingFact
+        interestingFactLabel.text = parrot.interestingFact
         
-        imageDownloadService.getData(from: parrot.images[0]) { [weak self] result in
+        container.layer.cornerRadius = Constants.cornerRadius
+        container.makeShadow()
+        
+        guard let parrotImageUrl = parrot.images.first else { return }
+        
+        delegate?.getParrotImage(url: parrotImageUrl) { [weak self] result in
             switch result {
             case .success(let data):
                 guard let image = UIImage(data: data) else { return }
@@ -38,20 +45,9 @@ class ParrotViewCell: UITableViewCell {
                     self?.parrotImageView.image = image
                 }
             case .failure(_):
-                break
+                /// Обработка ошибки
+                print("Изображение по url: \(parrotImageUrl) не загружено")
             }
         }
-    }
-    
-    
-}
-
-
-extension UIView {
-    func makeShadow() {
-        self.layer.shadowColor = UIColor.black.cgColor
-        self.layer.shadowOpacity = 0.7
-        self.layer.shadowOffset = CGSize(width: 0, height: 2)
-        self.layer.shadowRadius = 3
     }
 }

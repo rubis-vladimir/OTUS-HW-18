@@ -5,11 +5,11 @@
 //  Created by Владимир Рубис on 16.10.2022.
 //
 
-import Foundation
 import UIKit
 
 protocol DetailInfoRouting: Routing {
-    func route()
+    func popToRoot()
+    func routeToYoutube(urlString: String)
 }
 
 
@@ -23,7 +23,12 @@ final class DetailInfoRouter {
 }
 
 extension DetailInfoRouter: DetailInfoRouting {
-    func route() {
-        
+    func popToRoot() {
+        navigationController?.popToRootViewController(animated: true)
+    }
+    
+    func routeToYoutube(urlString: String) {
+        guard let url = URL(string: urlString) else { return }
+        UIApplication.shared.open(url, options: [ : ] , completionHandler: nil)
     }
 }

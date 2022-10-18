@@ -7,13 +7,18 @@
 
 import UIKit
 
-protocol ParrotCatalogPresentation {
-    
+protocol ParrotCatalogImageDownloadable: AnyObject {
+    func getParrotImage(url: String, completion: @escaping (Result<Data, DataFetcherError>) -> Void)
+}
+
+/// Протокол управления ивентами
+protocol ParrotCatalogPresentation: ParrotCatalogImageDownloadable {
     var parrots: [Parrot]? { get }
     func getParrots()
     func tapDetail(parrot: Parrot)
 }
 
+/// Слой презентации модуля ParrotCatalog
 final class ParrotCatalogPresenter {
     
     weak var delegate: ParrotCatalogPresenterDelegate?
@@ -34,9 +39,8 @@ final class ParrotCatalogPresenter {
     }
 }
 
-
+// MARK: - ParrotCatalogPresentation
 extension ParrotCatalogPresenter: ParrotCatalogPresentation {
-    
     func getParrots() {
         dataFetcherService.fetchParrots { result in
             switch result {
@@ -46,6 +50,10 @@ extension ParrotCatalogPresenter: ParrotCatalogPresentation {
                 self.delegate?.showError(error)
             }
         } 
+    }
+    
+    func getParrotImage(url: String, completion: @escaping (Result<Data, DataFetcherError>) -> Void) {
+        imageDownloadService.getData(from: url, responce: completion)
     }
     
     func tapDetail(parrot: Parrot) {

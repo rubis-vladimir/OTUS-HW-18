@@ -7,6 +7,14 @@
 
 import Foundation
 
+/// Ошибки загрузки данных
+enum DataFetcherError: Error {
+    case notFile
+    case failedToLoad
+    case failedToDecode
+    case imageFailedToLoad
+}
+
 // MARK: Сервис получения данных
 final class DataFetcherService {
     

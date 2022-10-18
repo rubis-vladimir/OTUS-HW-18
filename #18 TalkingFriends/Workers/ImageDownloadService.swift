@@ -27,7 +27,7 @@ final class ImageDownloadService: ImageDownloadServiceProtocol {
         
         URLSession.shared.dataTask(with: url) { (data, response, error) in
             if let response = response {
-//                print(response)
+                print(response)
             }
             
             guard let data = data, error == nil else {
