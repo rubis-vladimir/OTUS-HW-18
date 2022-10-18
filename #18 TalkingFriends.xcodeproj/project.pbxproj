@@ -32,7 +32,7 @@
 		7DB17DF528FEC98C0052E526 /* UIViewController + Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB17DF428FEC98C0052E526 /* UIViewController + Alert.swift */; };
 		7DB17DF728FED8540052E526 /* UIView + Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB17DF628FED8540052E526 /* UIView + Shadow.swift */; };
 		7DB17DF928FF047E0052E526 /* UIViewController + CustomBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB17DF828FF047D0052E526 /* UIViewController + CustomBarButton.swift */; };
-		7DB17DFB28FF2FE20052E526 /* ImageDownloadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB17DFA28FF2FE20052E526 /* ImageDownloadable.swift */; };
+		7DB17DFD28FF42030052E526 /* ImageDownloadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB17DFC28FF42020052E526 /* ImageDownloadable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,7 +63,7 @@
 		7DB17DF428FEC98C0052E526 /* UIViewController + Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Alert.swift"; sourceTree = "<group>"; };
 		7DB17DF628FED8540052E526 /* UIView + Shadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Shadow.swift"; sourceTree = "<group>"; };
 		7DB17DF828FF047D0052E526 /* UIViewController + CustomBarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + CustomBarButton.swift"; sourceTree = "<group>"; };
-		7DB17DFA28FF2FE20052E526 /* ImageDownloadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloadable.swift; sourceTree = "<group>"; };
+		7DB17DFC28FF42020052E526 /* ImageDownloadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloadable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,7 +181,7 @@
 			children = (
 				7DB17DDA28FC61080052E526 /* Assemblying.swift */,
 				7DB17DE228FC7F290052E526 /* Routing.swift */,
-				7DB17DFA28FF2FE20052E526 /* ImageDownloadable.swift */,
+				7DB17DFC28FF42020052E526 /* ImageDownloadable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -314,7 +314,7 @@
 				7DB17DF728FED8540052E526 /* UIView + Shadow.swift in Sources */,
 				7DB17DC528FC30150052E526 /* DetailInfoViewController.swift in Sources */,
 				7DB17DCB28FC3D230052E526 /* ParrotCatalogPresenter.swift in Sources */,
-				7DB17DFB28FF2FE20052E526 /* ImageDownloadable.swift in Sources */,
+				7DB17DFD28FF42030052E526 /* ImageDownloadable.swift in Sources */,
 				7DB17DDF28FC724D0052E526 /* DataFetcherService.swift in Sources */,
 				7DB17DE528FC831E0052E526 /* DetailInfoRouter.swift in Sources */,
 			);
