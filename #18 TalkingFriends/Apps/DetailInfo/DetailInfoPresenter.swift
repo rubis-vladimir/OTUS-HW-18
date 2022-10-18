@@ -5,11 +5,11 @@
 //  Created by Владимир Рубис on 16.10.2022.
 //
 
-import Foundation
+
 import UIKit
 
 protocol DetailInfoPresentation {
-    
+    var parrot: Parrot? { get }
 }
 
 final class DetailInfoPresenter {
@@ -18,7 +18,7 @@ final class DetailInfoPresenter {
     
     private let imageDownloadService: ImageDownloadServiceProtocol
     private let router: DetailInfoRouting
-    private var parrot: Parrot?
+    private(set) var parrot: Parrot?
     
     init(imageDownloadService: ImageDownloadServiceProtocol = ImageDownloadService(),
          router: DetailInfoRouting,

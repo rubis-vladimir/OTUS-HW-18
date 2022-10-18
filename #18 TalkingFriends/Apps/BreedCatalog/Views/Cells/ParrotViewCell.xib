@@ -26,17 +26,17 @@
                                     <constraint firstAttribute="width" secondItem="XJV-mY-9ZX" secondAttribute="height" id="t7T-iW-sXP"/>
                                 </constraints>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="qHq-2y-APY">
-                                <rect key="frame" x="205" y="35" width="259" height="150"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="qHq-2y-APY">
+                                <rect key="frame" x="205" y="30" width="259" height="155"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Пионус" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P50-wl-pob">
-                                        <rect key="frame" x="0.0" y="0.0" width="259" height="48.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="252" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Пионус asdasdasdasdasdasda" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P50-wl-pob">
+                                        <rect key="frame" x="0.0" y="0.0" width="259" height="61"/>
                                         <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="28"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Когда у птицы стресс, издает звук похожий на храп." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="YfW-Tx-PZZ">
-                                        <rect key="frame" x="0.0" y="68.5" width="259" height="81.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Когда у птицы стресс, издает звук похожий на храп." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="YfW-Tx-PZZ">
+                                        <rect key="frame" x="0.0" y="111.5" width="259" height="43.5"/>
                                         <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -47,7 +47,7 @@
                         <color key="backgroundColor" red="0.42352941176470588" green="0.73333333333333328" blue="0.23529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="qHq-2y-APY" firstAttribute="leading" secondItem="XJV-mY-9ZX" secondAttribute="trailing" constant="10" id="HPs-ul-Vfw"/>
-                            <constraint firstItem="qHq-2y-APY" firstAttribute="top" secondItem="tWW-CB-z9p" secondAttribute="top" constant="35" id="MdY-JQ-V8V"/>
+                            <constraint firstItem="qHq-2y-APY" firstAttribute="top" secondItem="tWW-CB-z9p" secondAttribute="top" constant="30" id="MdY-JQ-V8V"/>
                             <constraint firstAttribute="bottom" secondItem="qHq-2y-APY" secondAttribute="bottom" constant="25" id="cuz-9Y-vMw"/>
                             <constraint firstItem="XJV-mY-9ZX" firstAttribute="leading" secondItem="tWW-CB-z9p" secondAttribute="leading" constant="25" id="h9z-Nk-Hyx"/>
                             <constraint firstAttribute="trailing" secondItem="qHq-2y-APY" secondAttribute="trailing" constant="20" id="iQf-As-Kmh"/>
@@ -66,6 +66,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="breedLabel" destination="P50-wl-pob" id="qbG-gE-PQ5"/>
                 <outlet property="container" destination="tWW-CB-z9p" id="XMc-qu-QLM"/>
                 <outlet property="interestingFact" destination="YfW-Tx-PZZ" id="rgB-ag-YJk"/>
                 <outlet property="parrotImageView" destination="XJV-mY-9ZX" id="Ini-k1-may"/>

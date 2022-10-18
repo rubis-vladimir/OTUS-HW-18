@@ -4,14 +4,15 @@
         "habitat": "Южная и Центральная Америка",
         "size": "28",
         "interestingFact": "Когда у птицы стресс, издает звук похожий на храп",
-        "image": [
+        "images": [
             "https://pet7.ru/wp-content/uploads/2017/11/Pionus-druzhelyubnyj-vid-225x225.jpg",
             "https://pet7.ru/wp-content/uploads/2017/11/Pionus-mirolyubivyj-vid.jpg",
-            "https://pet7.ru/wp-content/uploads/2017/11/Pionus-opisanie-vida.jpg",
+            "https://pet7.ru/wp-content/uploads/2017/11/Pionus-uhod.jpg",
             "https://pet7.ru/wp-content/uploads/2017/11/Pionus-osobennosti-vida.jpg",
-            "https://pet7.ru/wp-content/uploads/2017/11/Pionus-soderzhanie.jpg",
+            "https://pet7.ru/wp-content/uploads/2017/11/Pionus-opisanie-vida.jpg",
             "https://pet7.ru/wp-content/uploads/2017/11/Pionus-spokojnyj-vid.jpg",
-            "https://pet7.ru/wp-content/uploads/2017/11/Pionus-uhod.jpg"
+            "https://pet7.ru/wp-content/uploads/2017/11/Pionus-soderzhanie.jpg"
+            
         ],
         "contentFeatures": "Частая нехватка витамина А, постоянно приносите новые веточки плодовых деревьев. В клетке должны быть игрушки, веревочки, жердочки и лесенки",
         "video": "https://www.youtube.com/watch?v=Oy6MiRZ1BRI"
@@ -21,7 +22,7 @@
         "habitat": "Австралия",
         "size": "20",
         "interestingFact": "Волнистые попугаи обитают стаями, но не имеют вожака. Защитой стаи занимаются взрослые самцы",
-        "image": [
+        "images": [
             "https://pet7.ru/wp-content/uploads/2017/09/Volnistyj-popugaj-soderzhanie-225x215.jpg",
             "https://pet7.ru/wp-content/uploads/2017/09/Volnistyj-popugaj-druzhelyubnyj-vid.jpg",
             "https://pet7.ru/wp-content/uploads/2017/09/Volnistyj-popugaj-opisanie-vida.jpg",
@@ -38,7 +39,7 @@
         "habitat": "Новая Гвинея, Индонезия",
         "size": "50",
         "interestingFact": "Птица хорошо себя чувствует при влажном и теплом климате",
-        "image": [
+        "images": [
             "https://pet7.ru/wp-content/uploads/2017/11/Grifovyj-popugaj-osobennosti-vida-225x225.jpg",
             "https://pet7.ru/wp-content/uploads/2017/11/Grifovyj-popugaj-dobrozhelatelnyj-vid.jpg",
             "https://pet7.ru/wp-content/uploads/2017/11/Grifovyj-popugaj-krupnyj-vid.jpg",
@@ -55,7 +56,7 @@
         "habitat": "Южная и Центральная Америка",
         "size": "45",
         "interestingFact": "Если уделять мало времени такому попугаю, то он сам будет завлекать вас в свои забавы",
-        "image": [
+        "images": [
             "https://pet7.ru/wp-content/uploads/2017/11/Amazon-igrivyj-vid-225x225.jpg",
             "https://pet7.ru/wp-content/uploads/2017/11/Amazon-druzhelyubnyj-vid.jpeg",
             "https://pet7.ru/wp-content/uploads/2017/11/Amazon-opisanie-vida.jpg",
@@ -72,7 +73,7 @@
         "habitat": "Австралия, остров Тасмания",
         "size": "35",
         "interestingFact": "Попугай этого вида держится грациозно и статно, даже с некоторым высокомерием, будто осознает свою величавую красоту",
-        "image": [
+        "images": [
             "https://pet7.ru/wp-content/uploads/2017/10/Rozella-pestraya-soderzhanie-225x225.jpg",
             "https://pet7.ru/wp-content/uploads/2017/10/Rozella-pestraya-druzhelyubnyj-vid.jpg",
             "https://pet7.ru/wp-content/uploads/2017/10/Rozella-pestraya-obshhitelnyj-vid.jpg",

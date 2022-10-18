@@ -17,7 +17,7 @@ protocol ParrotCatalogPresentation {
 final class ParrotCatalogPresenter {
     
     weak var delegate: ParrotCatalogPresenterDelegate?
-    private let router: ParrotCatalogRouter
+    private let router: ParrotCatalogRouting
     private let dataFetcherService: DataFetcherService = DataFetcherService()
     private let imageDownloadService: ImageDownloadServiceProtocol
     
@@ -27,7 +27,7 @@ final class ParrotCatalogPresenter {
         }
     }
     
-    init(router: ParrotCatalogRouter,
+    init(router: ParrotCatalogRouting,
         imageDownloadService: ImageDownloadServiceProtocol = ImageDownloadService()) {
         self.router = router
         self.imageDownloadService = imageDownloadService

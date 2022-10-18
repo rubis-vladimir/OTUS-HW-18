@@ -14,6 +14,8 @@ class ParrotViewCell: UITableViewCell {
     @IBOutlet weak var breedLabel: UILabel!
     @IBOutlet var interestingFact: UILabel!
     
+    let imageDownloadService = ImageDownloadService()
+    
     func configure(with parrot: Parrot) {
         container.layer.cornerRadius = 20
         container.makeShadow()
@@ -21,7 +23,24 @@ class ParrotViewCell: UITableViewCell {
         
         parrotImageView.layer.borderWidth = 2.5
         parrotImageView.layer.cornerRadius = 70
+        
         self.backgroundColor = .clear
+        self.selectionStyle = .none
+        
+        breedLabel.text = parrot.breed
+        interestingFact.text = parrot.interestingFact
+        
+        imageDownloadService.getData(from: parrot.images[0]) { [weak self] result in
+            switch result {
+            case .success(let data):
+                guard let image = UIImage(data: data) else { return }
+                DispatchQueue.main.async {
+                    self?.parrotImageView.image = image
+                }
+            case .failure(_):
+                break
+            }
+        }
     }
     
     

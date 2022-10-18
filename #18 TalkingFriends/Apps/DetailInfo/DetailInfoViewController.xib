@@ -5,27 +5,193 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailInfoViewController" customModule="_18_TalkingFriends" customModuleProvider="target">
             <connections>
+                <outlet property="breedLabel" destination="pgi-jG-ikc" id="buu-lR-0fD"/>
+                <outlet property="container" destination="MZR-tD-HR1" id="R1Z-NE-a6R"/>
+                <outlet property="contentFeaturesLabel" destination="Q3e-7X-Gz0" id="VS5-dd-U12"/>
+                <outlet property="habitatLabel" destination="Rvq-FG-GwL" id="poO-0e-i11"/>
+                <outlet property="interestingFactLabel" destination="iDD-Mp-cBe" id="kxl-Rn-be1"/>
+                <outlet property="parrotImageView" destination="5m1-mQ-VMt" id="lCP-6b-wQ2"/>
+                <outlet property="photoView" destination="b8M-2v-cxz" id="CGc-dL-wYb"/>
+                <outlet property="sizeLabel" destination="O1G-YG-uyb" id="fTb-Rm-cgt"/>
+                <outlet property="stackView" destination="n9k-83-CvY" id="qeW-hI-VsN"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outletCollection property="images" destination="5m1-mQ-VMt" collectionClass="NSMutableArray" id="joA-O6-sGx"/>
+                <outletCollection property="images" destination="rFk-HM-DSM" collectionClass="NSMutableArray" id="IDB-OE-3Za"/>
+                <outletCollection property="images" destination="05O-ET-vZT" collectionClass="NSMutableArray" id="Eak-Ot-hdV"/>
+                <outletCollection property="images" destination="faI-1j-EtQ" collectionClass="NSMutableArray" id="VRA-Qc-GoA"/>
+                <outletCollection property="images" destination="M8T-se-Vn3" collectionClass="NSMutableArray" id="Ka0-Cl-ER1"/>
+                <outletCollection property="images" destination="Dcx-nv-qnz" collectionClass="NSMutableArray" id="8Di-3g-OMQ"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+        <view contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b8M-2v-cxz">
+                    <rect key="frame" x="20" y="463" width="374" height="237"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="n9k-83-CvY">
+                            <rect key="frame" x="0.0" y="8" width="374" height="229"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SVY-HP-qkz">
+                                    <rect key="frame" x="0.0" y="0.0" width="374" height="24"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="24" id="1r5-Zo-0t7"/>
+                                    </constraints>
+                                    <attributedString key="attributedText">
+                                        <fragment content="Фотографии">
+                                            <attributes>
+                                                <font key="NSFont" size="22" name="MarkerFelt-Thin"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" firstLineHeadIndent="16" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="brX-hz-O3L">
+                                    <rect key="frame" x="0.0" y="29" width="374" height="200"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pionus" translatesAutoresizingMaskIntoConstraints="NO" id="rFk-HM-DSM">
+                                            <rect key="frame" x="0.0" y="0.0" width="174" height="200"/>
+                                        </imageView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CYg-Mz-0ys">
+                                            <rect key="frame" x="174" y="0.0" width="200" height="200"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="I8k-RU-Ex5">
+                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="200"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pionus" translatesAutoresizingMaskIntoConstraints="NO" id="05O-ET-vZT">
+                                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="05O-ET-vZT" secondAttribute="height" multiplier="1:1" id="WIP-FN-Lsp"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pionus" translatesAutoresizingMaskIntoConstraints="NO" id="faI-1j-EtQ">
+                                                            <rect key="frame" x="0.0" y="100" width="100" height="100"/>
+                                                        </imageView>
+                                                    </subviews>
+                                                </stackView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Y2u-12-7ll">
+                                                    <rect key="frame" x="100" y="0.0" width="100" height="200"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pionus" translatesAutoresizingMaskIntoConstraints="NO" id="M8T-se-Vn3">
+                                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="M8T-se-Vn3" secondAttribute="height" multiplier="1:1" id="8au-7m-vUb"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pionus" translatesAutoresizingMaskIntoConstraints="NO" id="Dcx-nv-qnz">
+                                                            <rect key="frame" x="0.0" y="100" width="100" height="100"/>
+                                                        </imageView>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="CYg-Mz-0ys" secondAttribute="height" multiplier="1:1" id="Z2x-Ob-kJL"/>
+                                            </constraints>
+                                        </stackView>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.42352941179999998" green="0.73333333329999995" blue="0.23529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="237" id="16D-fh-Dub"/>
+                        <constraint firstAttribute="trailing" secondItem="n9k-83-CvY" secondAttribute="trailing" id="W2h-uO-cAT"/>
+                        <constraint firstAttribute="bottom" secondItem="n9k-83-CvY" secondAttribute="bottom" id="kgh-hg-PTM"/>
+                        <constraint firstItem="n9k-83-CvY" firstAttribute="leading" secondItem="b8M-2v-cxz" secondAttribute="leading" id="n2f-0h-mbW"/>
+                        <constraint firstItem="n9k-83-CvY" firstAttribute="top" secondItem="b8M-2v-cxz" secondAttribute="topMargin" id="xaG-La-Lao"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MZR-tD-HR1">
+                    <rect key="frame" x="20" y="139" width="374" height="304"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Пионус" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="pgi-jG-ikc">
+                            <rect key="frame" x="8" y="8" width="188" height="67"/>
+                            <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="28"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Qwp-x9-sNy">
+                            <rect key="frame" x="12" y="83" width="350" height="209"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="Rvq-FG-GwL">
+                                    <rect key="frame" x="0.0" y="0.0" width="350" height="26"/>
+                                    <attributedString key="attributedText">
+                                        <fragment content="Место обитания: Южная и Центральная  Америка">
+                                            <attributes>
+                                                <font key="NSFont" size="16" name="Noteworthy-Bold"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Размер: до 28 см " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O1G-YG-uyb">
+                                    <rect key="frame" x="0.0" y="31" width="350" height="24"/>
+                                    <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="15"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q3e-7X-Gz0">
+                                    <rect key="frame" x="0.0" y="60" width="350" height="96"/>
+                                    <string key="text">Особенности содержания: Частая нехватка витамина А, постоянно приносите новые веточки плодовых деревьев. В клетке должны быть игрушки, веревочки, жердочки и лесенки</string>
+                                    <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="15"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Интересный факт: Когда у птицы стресс, издает звук похожий на храп" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iDD-Mp-cBe">
+                                    <rect key="frame" x="0.0" y="161" width="350" height="48"/>
+                                    <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="15"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pionus" translatesAutoresizingMaskIntoConstraints="NO" id="5m1-mQ-VMt">
+                            <rect key="frame" x="204" y="-75" width="150" height="150"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="150" id="934-WO-FqA"/>
+                                <constraint firstAttribute="width" constant="150" id="dns-vE-7Xf"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.42352941176470588" green="0.73333333333333328" blue="0.23529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="pgi-jG-ikc" firstAttribute="bottom" secondItem="5m1-mQ-VMt" secondAttribute="bottom" id="1Lv-fE-dZK"/>
+                        <constraint firstItem="Qwp-x9-sNy" firstAttribute="leading" secondItem="MZR-tD-HR1" secondAttribute="leading" constant="12" id="7pm-mm-Gdo"/>
+                        <constraint firstItem="pgi-jG-ikc" firstAttribute="leading" secondItem="MZR-tD-HR1" secondAttribute="leading" constant="8" id="Dwt-wY-lqC"/>
+                        <constraint firstItem="5m1-mQ-VMt" firstAttribute="leading" secondItem="pgi-jG-ikc" secondAttribute="trailing" constant="8" id="Msg-lp-FjL"/>
+                        <constraint firstItem="pgi-jG-ikc" firstAttribute="top" secondItem="MZR-tD-HR1" secondAttribute="top" constant="8" id="PYz-yI-Is1"/>
+                        <constraint firstAttribute="trailing" secondItem="Qwp-x9-sNy" secondAttribute="trailing" constant="12" id="T11-Xd-czT"/>
+                        <constraint firstAttribute="bottom" secondItem="Qwp-x9-sNy" secondAttribute="bottom" constant="12" id="mBM-lw-jtb"/>
+                        <constraint firstItem="Qwp-x9-sNy" firstAttribute="top" secondItem="5m1-mQ-VMt" secondAttribute="bottom" constant="8" id="nDc-hG-FAU"/>
+                        <constraint firstAttribute="trailing" secondItem="5m1-mQ-VMt" secondAttribute="trailing" constant="20" id="rH5-3m-r4Z"/>
+                    </constraints>
+                </view>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-            <point key="canvasLocation" x="132" y="132"/>
+            <color key="backgroundColor" red="1" green="0.84313725490196079" blue="0.65098039215686276" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="MZR-tD-HR1" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="1hc-T3-xPq"/>
+                <constraint firstItem="b8M-2v-cxz" firstAttribute="top" secondItem="MZR-tD-HR1" secondAttribute="bottom" constant="20" id="H4G-1r-QXm"/>
+                <constraint firstItem="MZR-tD-HR1" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="N1Z-dd-9aq"/>
+                <constraint firstItem="5m1-mQ-VMt" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="aXQ-Sw-Vrw"/>
+                <constraint firstItem="b8M-2v-cxz" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="cjb-nV-VXX"/>
+                <constraint firstItem="MZR-tD-HR1" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="95" id="u35-hA-V3s"/>
+                <constraint firstItem="b8M-2v-cxz" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="vMx-Gg-3gK"/>
+            </constraints>
+            <point key="canvasLocation" x="131.8840579710145" y="131.91964285714286"/>
         </view>
     </objects>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <image name="Pionus" width="112.5" height="112.5"/>
     </resources>
 </document>

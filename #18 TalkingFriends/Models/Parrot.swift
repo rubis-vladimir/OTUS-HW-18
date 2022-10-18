@@ -10,8 +10,9 @@ import Foundation
 struct Parrot: Decodable {
     var breed: String
     var habitat: String
-    var size: Int
+    var size: String
     var interestingFact: String
-    var imageStringNames: [String]
-    var videoUrlString: String
+    var contentFeatures: String
+    var images: [String]
+    var video: String
 }
