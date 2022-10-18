@@ -5,23 +5,22 @@
 //  Created by Владимир Рубис on 16.10.2022.
 //
 
-import UIKit
+import Foundation
 
-protocol ParrotCatalogImageDownloadable: AnyObject {
-    func getParrotImage(url: String, completion: @escaping (Result<Data, DataFetcherError>) -> Void)
-}
-
-/// Протокол управления ивентами
-protocol ParrotCatalogPresentation: ParrotCatalogImageDownloadable {
+/// Протокол управления UI-ивентами модуля ParrotCatalog
+protocol ParrotCatalogPresentation: ImageDownloadable {
+    /// Массив попугаев
     var parrots: [Parrot]? { get }
+    /// Получает данные по попугаям
     func getParrots()
+    /// Передача касания к роутеру
     func tapDetail(parrot: Parrot)
 }
 
 /// Слой презентации модуля ParrotCatalog
 final class ParrotCatalogPresenter {
-    
     weak var delegate: ParrotCatalogPresenterDelegate?
+    
     private let router: ParrotCatalogRouting
     private let dataFetcherService: DataFetcherService = DataFetcherService()
     private let imageDownloadService: ImageDownloadServiceProtocol

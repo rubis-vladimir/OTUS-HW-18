@@ -7,12 +7,10 @@
 
 import UIKit
 
-protocol DetailInfoPresenterDelegate: AnyObject {
-    
-}
-
+/// Контроллер представления детальной информации попугая
 final class DetailInfoViewController: UIViewController {
     
+    // MARK: - Properties & IBOutlet
     @IBOutlet weak var parrotImageView: UIImageView!
     @IBOutlet weak var container: UIView!
     @IBOutlet weak var photoView: UIView!
@@ -38,6 +36,7 @@ final class DetailInfoViewController: UIViewController {
         static var borderWidth = 2.5
     }
     
+    // MARK: - Init
     init(presenter: DetailInfoPresenter) {
         self.presenter = presenter
         super.init(nibName: nil, bundle: nil)
@@ -55,6 +54,7 @@ final class DetailInfoViewController: UIViewController {
         setupGestureRecognizers()
     }
     
+    // MARK: - Private func
     private func setupUI() {
         parrotImageView.layer.cornerRadius = Constants.imageCornerRadius
         parrotImageView.layer.borderWidth = Constants.borderWidth
@@ -80,6 +80,7 @@ final class DetailInfoViewController: UIViewController {
         downloadImages(with: parrot)
     }
     
+    /// Загружает картинки и устанавливает их
     private func downloadImages(with parrot: Parrot) {
         let allImageViews = [parrotImageView] + imageViews
         
@@ -112,6 +113,7 @@ final class DetailInfoViewController: UIViewController {
         )
     }
     
+    /// Настройка отработки касаний экрана
     private func setupGestureRecognizers() {
         singleTapGestureRecognizer.addTarget(self, action: #selector(handleSingleTapGesture(_:)))
         doubleTapGestureRecognizer.addTarget(self, action: #selector(handleDoubleTapGesture(_:)))
@@ -125,12 +127,14 @@ final class DetailInfoViewController: UIViewController {
         parrotImageView.addGestureRecognizer(doubleTapGestureRecognizer)
     }
     
+    /// Действие при двойном нажатии - переход к youtube-видео
     @objc private func handleDoubleTapGesture(_ gestureRecognizer: UITapGestureRecognizer) {
         guard let parrot = presenter.parrot else { return }
         let videoUrlString = parrot.video
         presenter.openYoutube(with: videoUrlString)
     }
     
+    /// Действие при одинарном нажатии - появляется изображение Youtube
     @objc private func handleSingleTapGesture(_ gestureRecognizer: UITapGestureRecognizer) {
         
         guard let image = UIImage(named: "youtube") else { return }
@@ -153,10 +157,7 @@ final class DetailInfoViewController: UIViewController {
     }
 }
 
-extension DetailInfoViewController: DetailInfoPresenterDelegate {
-    
-}
-
+// MARK: - UIGestureRecognizerDelegate
 extension DetailInfoViewController: UIGestureRecognizerDelegate {
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer,
                            shouldRequireFailureOf otherGestureRecognizer: UIGestureRecognizer) -> Bool {

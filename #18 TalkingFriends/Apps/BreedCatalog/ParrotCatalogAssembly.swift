@@ -16,6 +16,7 @@ final class ParrotCatalogAssembly {
     }
 }
 
+// MARK: - Assemblying
 extension ParrotCatalogAssembly: Assemblying {
     
     func assembly() -> UIViewController {

@@ -20,6 +20,7 @@ final class DetailInfoAssembly {
     }
 }
 
+// MARK: - Assemblying
 extension DetailInfoAssembly: Assemblying {
     
     func assembly() -> UIViewController {
@@ -27,7 +28,6 @@ extension DetailInfoAssembly: Assemblying {
         let presenter = DetailInfoPresenter(router: router,
                                             parrot: parrot)
         let viewController = DetailInfoViewController(presenter: presenter)
-        presenter.delegate = viewController
         return viewController
     }
 }

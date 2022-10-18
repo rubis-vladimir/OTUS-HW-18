@@ -9,6 +9,12 @@ import UIKit
 
 extension UIViewController {
     
+    /// Создает кастомную кнопку
+    ///  - Parameters:
+    ///   - imageName: название изображения
+    ///   - title: текст кнопки
+    ///   - font: шрифт кнопки
+    ///   - selector: действие
     func createCustomBarButton(imageName: String,
                                title: String,
                                font: UIFont,

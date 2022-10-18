@@ -8,6 +8,8 @@
 import UIKit
 
 extension UIView {
+    
+    /// Добавляет тень ко вью
     func makeShadow() {
         self.layer.shadowColor = UIColor.black.cgColor
         self.layer.shadowOpacity = 0.7

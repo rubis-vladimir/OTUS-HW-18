@@ -7,12 +7,15 @@
 
 import UIKit
 
+/// Протокол маршрутизации модуля DetailInfo
 protocol DetailInfoRouting: Routing {
+    /// Возврат на стартовый экран
     func popToRoot()
+    /// Переход по ссылке на Youtube
     func routeToYoutube(urlString: String)
 }
 
-
+/// Слой маршрутизации модуля DetailInfo
 final class DetailInfoRouter {
     
     var navigationController: UINavigationController?
@@ -22,6 +25,7 @@ final class DetailInfoRouter {
     }
 }
 
+// MARK: - DetailInfoRouting
 extension DetailInfoRouter: DetailInfoRouting {
     func popToRoot() {
         navigationController?.popToRootViewController(animated: true)

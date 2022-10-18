@@ -7,8 +7,6 @@
 
 import Foundation
 
-
-
 // MARK: Протокол получения данных
 protocol DataFetcherProtocol {
     

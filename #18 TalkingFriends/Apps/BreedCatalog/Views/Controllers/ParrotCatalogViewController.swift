@@ -7,12 +7,15 @@
 
 import UIKit
 
+/// Протокол управления view-слоем модуля ParrotCatalog
 protocol ParrotCatalogPresenterDelegate: AnyObject {
+    /// Обновление UI
     func updateUI()
-    
+    /// Обработка и показ ошибки
     func showError(_ error: Error)
 }
 
+/// Контроллер представления таблицы с попугаями
 final class ParrotCatalogViewController: UIViewController {
     
     // MARK: - Properties
@@ -27,6 +30,7 @@ final class ParrotCatalogViewController: UIViewController {
         static var title: String = "Мои говорящие друзья"
     }
     
+    // MARK: - Init
     init(presenter: ParrotCatalogPresentation) {
         self.presenter = presenter
         super.init(nibName: nil, bundle: nil)
@@ -43,6 +47,7 @@ final class ParrotCatalogViewController: UIViewController {
         presenter.getParrots()
     }
     
+    // MARK: - Private func
     private func setupUI() {
         title = Constants.title
         setupNavBar()

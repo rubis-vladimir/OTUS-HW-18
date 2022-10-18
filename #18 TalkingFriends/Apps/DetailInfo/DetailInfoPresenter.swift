@@ -8,18 +8,18 @@
 
 import UIKit
 
-protocol DetailInfoPresentation {
+/// Протокол обработки UI-ивентов модуля DetailInfo
+protocol DetailInfoPresentation: ImageDownloadable {
+    /// Модель попугая
     var parrot: Parrot? { get }
-    func getParrotImage(url: String,
-                        completion: @escaping (Result<Data, DataFetcherError>) -> Void)
+    /// Нажатия на кнопку назад
     func tapGoBack()
+    /// Нажатие на кнопку
     func openYoutube(with urlString: String)
-    
 }
 
+/// Слой презентации модуля DetailInfo
 final class DetailInfoPresenter {
-    weak var delegate: DetailInfoPresenterDelegate?
-    
     private let imageDownloadService: ImageDownloadServiceProtocol
     private let router: DetailInfoRouting
     private(set) var parrot: Parrot?

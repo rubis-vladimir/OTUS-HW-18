@@ -7,8 +7,8 @@
 
 import UIKit
 
+/// Протокол навигации
 protocol Routing {
     var navigationController: UINavigationController? { get set }
-    
 }
 

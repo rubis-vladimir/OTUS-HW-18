@@ -7,6 +7,7 @@
 
 import UIKit
 
+/// Ячейка с информацией о попугае
 class ParrotViewCell: UITableViewCell {
     
     @IBOutlet weak var parrotImageView: UIImageView!
@@ -20,8 +21,10 @@ class ParrotViewCell: UITableViewCell {
         static var borderColor = UIColor.black.cgColor
     }
     
-    weak var delegate: ParrotCatalogImageDownloadable?
+    weak var delegate: ImageDownloadable?
     
+    /// Настройка ячейки
+    ///  - Parameter parrot: модель попугая
     func configure(with parrot: Parrot) {
         backgroundColor = .clear
         selectionStyle = .none

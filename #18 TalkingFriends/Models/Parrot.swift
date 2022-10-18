@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Модель попугая
 struct Parrot: Decodable {
     var breed: String
     var habitat: String

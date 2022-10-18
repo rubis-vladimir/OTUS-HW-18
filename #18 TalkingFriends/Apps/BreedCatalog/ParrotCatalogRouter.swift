@@ -7,11 +7,13 @@
 
 import UIKit
 
+/// Протокол маршрутизации модуля ParrotCatalog
 protocol ParrotCatalogRouting: Routing {
+    /// Переход к экрану детальной информации
     func showDetail(parrot: Parrot?)
 }
 
-
+/// Слой маршрутизации модуля ParrotCatalog
 final class ParrotCatalogRouter {
     var navigationController: UINavigationController?
     
@@ -20,6 +22,7 @@ final class ParrotCatalogRouter {
     }
 }
 
+// MARK: - ParrotCatalogRouting
 extension ParrotCatalogRouter: ParrotCatalogRouting {
     
     func showDetail(parrot: Parrot?) {
